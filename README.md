@@ -12,14 +12,15 @@ NodeJS application with MongoDB created for the Datadog course
     ```sh
     npm install
     ```
- 3.  Run the application:
+3.  Run the application:
 
     ```sh
     npm run start
     ```
     
- 4.  Navivate to Swagger Link:
+4.  Navivate to Swagger Link:
 
     ```sh
     http://localhost:3001/swagger/
     ```
+    
