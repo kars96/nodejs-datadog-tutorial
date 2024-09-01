@@ -1,11 +1,14 @@
+const tracer = require('dd-trace').init();
+
 const express = require("express");
 const mongoose = require("mongoose");
 const birdRouter = require("./routes/BirdRoutes");
 const swaggerUI = require('swagger-ui-express');
 const swagger = require('./swagger.json');
 
-const app = express();
 
+tracer.dogstatsd.increment('service.starts');
+const app = express();
 // middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
